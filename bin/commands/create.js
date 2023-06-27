@@ -67,7 +67,7 @@ export default function (name, option) {
         // 获取到项目了  下载到本地
         // 方案一  找zip包的下载地址  但是码云 gitee给屏蔽掉了  因为需要滑块儿认证
         // 方案二  git clone  使用 download-git-repo 都支持
-        //上面可以写用户的选择  
+        //上面可以写用户的选择
         yield cloneAndCheckoutTag(tag, projectName, name);
     });
 }

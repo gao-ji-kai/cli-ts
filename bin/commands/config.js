@@ -1,3 +1,10 @@
 export default function (value, option) {
-    console.log(value, option, '122');
+    const action = Object.keys(option)[0];
+    const key = option[action];
+    if (action === "get") {
+    }
+    else if (action === "set") {
+    }
+    else if (action === "delete") {
+    }
 }
