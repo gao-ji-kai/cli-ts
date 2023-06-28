@@ -1,8 +1,10 @@
 export const defaultConfig = {
   //用户通过命令行来配置
-  organization: "heng-chu",
-  accessToken: "933ee0c2e9e11f414c1909861965fb1d",
+    organization: "gaoter",
+    accessToken: "27d396c213afdcdfdad40fa790bda01b",
+  
 };
 
-
-export const configPath = `${process.env[process.platform === 'darwin' ? 'HOME' : 'USERPROFILE']}`;
+export const configPath = `${
+  process.env[process.platform === "darwin" ? "HOME" : "USERPROFILE"]
+}`;

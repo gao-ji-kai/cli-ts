@@ -55,7 +55,8 @@ export default function (name, option) {
                 choices: projects,
             },
         ]);
-        let { tags } = yield getProjectVersions(projectName);
+        let tags = yield getProjectVersions(projectName);
+        console.log(tags, "1212");
         let { tag } = yield inquirer.prompt([
             {
                 name: "tag",

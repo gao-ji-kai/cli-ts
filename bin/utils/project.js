@@ -23,12 +23,13 @@ export function getOrganizationProjects() {
                 Authorization: `Bearer ${accessToken}`,
             },
         });
+        console.log(res, "2222");
         return res.data.map((item) => item.name);
     });
 }
 export function getProjectVersions(repo) {
     return __awaiter(this, void 0, void 0, function* () {
-        const res = yield axios.get(`https://gitee.com/api/v5/repos/${organization}/{repo}/tags`, {
+        const res = yield axios.get(`https://gitee.com/api/v5/repos/${organization}/${repo}/tags`, {
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },
