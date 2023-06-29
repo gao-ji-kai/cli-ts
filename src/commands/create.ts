@@ -50,7 +50,6 @@ export default async function (name, option) {
     },
   ]);
   let tags = await getProjectVersions(projectName);
-  console.log(tags, "1212");
   let { tag } = await inquirer.prompt([
     {
       name: "tag",

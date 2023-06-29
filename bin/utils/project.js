@@ -12,10 +12,11 @@ import { exec } from "child_process";
 import util from "util";
 import { wrapLoading } from "../utils/loading.js";
 import { rm } from "fs/promises";
-import { defaultConfig } from "../constants.js";
+import { getAllConfig } from "../commands/config.js";
 const execPromisifed = util.promisify(exec); //因为exec本事一个回调方法 所以我们要将它转成一个promise方法  需要借助util库
 //exec  一种回调的写法  是node中 执行命令的一个插件 因为我们要在node中执行git clone 命令
-const { organization, accessToken } = defaultConfig;
+// const { organization, accessToken } = defaultConfig;
+const { organization, accessToken } = getAllConfig().config;
 export function getOrganizationProjects() {
     return __awaiter(this, void 0, void 0, function* () {
         const res = yield axios.get(`https://gitee.com/api/v5/orgs/${organization}/repos`, {
@@ -23,7 +24,6 @@ export function getOrganizationProjects() {
                 Authorization: `Bearer ${accessToken}`,
             },
         });
-        console.log(res, "2222");
         return res.data.map((item) => item.name);
     });
 }

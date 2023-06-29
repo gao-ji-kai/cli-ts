@@ -6,5 +6,5 @@ export const defaultConfig = {
 };
 
 export const configPath = `${
-  process.env[process.platform === "darwin" ? "HOME" : "USERPROFILE"]
-}`;
+  process.env[process.platform === "darwin" ? "HOME" : "USERPROFILE"] //判断是什么环境 mac或window
+}/.hcrc`;

@@ -3,4 +3,5 @@ export const defaultConfig = {
     organization: "gaoter",
     accessToken: "27d396c213afdcdfdad40fa790bda01b",
 };
-export const configPath = `${process.env[process.platform === "darwin" ? "HOME" : "USERPROFILE"]}`;
+export const configPath = `${process.env[process.platform === "darwin" ? "HOME" : "USERPROFILE"] //判断是什么环境 mac或window
+}/.hcrc`;
